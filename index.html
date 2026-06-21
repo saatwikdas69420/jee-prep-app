@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JEE Quest | Gamified Prep</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="app-container">
+        <header class="stats-bar">
+            <div class="logo">🎯 JEE Quest</div>
+            <div class="stats">
+                <span id="streak-display">🔥 0 Days</span>
+                <span id="xp-display">💎 0 XP</span>
+            </div>
+        </header>
+
+        <main class="content-box">
+            <div id="auth-section" class="card">
+                <h2>Welcome to your JEE Journey</h2>
+                <p>Sign in to track your streaks and XP rewards.</p>
+                <input type="email" id="email" placeholder="Email Address">
+                <input type="password" id="password" placeholder="Password">
+                <div class="auth-buttons">
+                    <button id="btn-login">Log In</button>
+                    <button id="btn-signup">Sign Up</button>
+                </div>
+            </div>
+
+            <div id="study-section" class="card hidden">
+                <h2 id="today-date">June 22nd, 2026</h2>
+                <h3 id="topic-title">Loading today's module...</h3>
+                <p id="task-desc">Please complete the core reading before starting the daily challenge.</p>
+                <a id="resource-link" href="#" target="_blank" class="btn-primary">Open Khan Academy Resource</a>
+                
+                <hr class="divider">
+
+                <div id="quiz-container">
+                    <div class="progress-bar-container">
+                        <div id="progress-bar" class="progress-bar"></div>
+                    </div>
+                    <p id="question-text">Question will appear here...</p>
+                    <div id="options-container" class="options-grid">
+                        </div>
+                    <button id="btn-submit-answer" class="btn-verify" disabled>Verify Answer</button>
+                    <div id="feedback" class="feedback-message hidden"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
